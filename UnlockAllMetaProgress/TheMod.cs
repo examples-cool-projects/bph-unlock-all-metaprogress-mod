@@ -44,30 +44,25 @@ namespace UnlockAllMetaProgress
                 return r;
             }
 
-            static Character.CharacterName[] characters =
-            {
-                Character.CharacterName.Purse,
-                Character.CharacterName.Tote,
-                Character.CharacterName.CR8,
-                Character.CharacterName.Satchel
-            };
-
             [HarmonyPostfix]
             static void postfix(RunType ___runType)
             {
                 string mode = ___runType.name;
                 bool updated_metaprogress = false;
                 MetaProgressSaveManager metaprogress = UnityEngine.Object.FindObjectOfType<MetaProgressSaveManager>();
-                foreach (Character.CharacterName character in characters)
+                foreach (Character.CharacterName character in Enum.GetValues(typeof(Character.CharacterName)))
                 {
-                    RunType run_type = new RunType();
-                    run_type.name = mode;
-                    if (!metaprogress.RunTypeCompleted(run_type, character, true))
+                    if (character != Character.CharacterName.Any)
                     {
-                        MetaProgressSaveManager.RunCompleted run = make_run(character, mode);
-                        metaprogress.runsCompleted.Add(run);
-                        updated_metaprogress = true;
-                        the_mod.log("Added run metaprogress: " + run.runType + ", " + run.character + ", " + run.ironMan);
+                        RunType run_type = new RunType();
+                        run_type.name = mode;
+                        if (!metaprogress.RunTypeCompleted(run_type, character, true))
+                        {
+                            MetaProgressSaveManager.RunCompleted run = make_run(character, mode);
+                            metaprogress.runsCompleted.Add(run);
+                            updated_metaprogress = true;
+                            the_mod.log("Added run metaprogress: " + run.runType + ", " + run.character + ", " + run.ironMan);
+                        }
                     }
                 }
                 if (updated_metaprogress)

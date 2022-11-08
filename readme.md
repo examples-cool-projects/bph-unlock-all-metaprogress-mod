@@ -1,6 +1,6 @@
 ### This is a mod
 
-It unlocks all metaprogress for Backpack Hero. It runs on v0.26.11 as of 2022-10-11.
+It unlocks all metaprogress for Backpack Hero. It runs on v0.28.3 as of 2022-11-08.
 
 Metaprogress includes unlocked run types (with or without the "delete save on death" feature enabled), items and enemies seen in the item atlas, and completed tutorials.
 

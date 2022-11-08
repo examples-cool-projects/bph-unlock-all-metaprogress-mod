@@ -2,7 +2,7 @@ using System.Runtime.InteropServices;
 using MelonLoader;
 using UnlockAllMetaProgress;
 
-[assembly: MelonInfo(typeof(TheMod), "UnlockAllMetaProgress", "0.0.0.0", "Example's cool mods")]
+[assembly: MelonInfo(typeof(TheMod), "UnlockAllMetaProgress", "0.0.0.1", "Example's cool mods")]
 
 // In SDK-style projects such as this one, several assembly attributes that were historically
 // defined in this file are now automatically added during build and populated with

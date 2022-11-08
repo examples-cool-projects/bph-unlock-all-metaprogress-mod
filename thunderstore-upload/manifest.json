@@ -1,7 +1,7 @@
 {
   "name": "bph_unlock_all_metaprogress",
   "description": "unlocks all completed runs and items in Backpack Hero",
-  "version_number": "1.0.0",
+  "version_number": "1.0.2",
   "dependencies": [
     "LavaGang-MelonLoader-0.5.6"
   ],
