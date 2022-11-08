@@ -4,6 +4,9 @@ using System.Collections.Generic;
 using MelonLoader;
 using UnityEngine;
 using HarmonyLib;
+using UnlockAllMetaProgress;
+
+[assembly: MelonInfo(typeof(TheMod), "UnlockAllMetaProgress", "0.0.0.1", "Example's cool mods")]
 
 namespace UnlockAllMetaProgress
 {
